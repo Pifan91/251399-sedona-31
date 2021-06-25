@@ -1,0 +1,161 @@
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "PTSans";
+
+  src: local("PTSans"), url("../fonts/PTSans.woff2") format("woff2"), url("../fonts/PTSans.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "PTSans-Bold";
+
+  src: local("PTSans"), url("../fonts/PTSans-Bold.woff2") format("woff2"), url("../fonts/PTSans-Bold.woff") format("woff");
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -55%);
+    opacity: 1;
+
+    animation-timing-function: ease-in;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  40% {
+    transform: translate(-50%, -54%);
+
+    animation-timing-function: ease-in;
+  }
+
+  65% {
+    transform: translate(-50%, -53%);
+
+    animation-timing-function: ease-in;
+  }
+
+  82% {
+    transform: translate(-50%, -52%);
+
+    animation-timing-function: ease-in;
+  }
+
+  93% {
+    transform: translate(-50%, -51%);
+
+    animation-timing-function: ease-in;
+  }
+
+  25%,
+  55%,
+  75%,
+  87% {
+    transform: translate(-50%, -50%);
+
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translate(-52%, -50%);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translate(-48%, -50%);
+  }
+
+  80% {
+    transform: translate(-49%, -50%);
+  }
+
+  90% {
+    transform: translate(-51%, -50%);
+  }
+}
+
+
+:root {
+  --basic-black: #000000;
+  --basic-white: #ffffff;
+  --text-color: #333333;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: grid;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  font-family: "PTSans", "Arial", sans-serif;
+  color: var(--text-color);
+  text-transform: uppercase;
+
+  grid-template-rows: auto 1fr auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
