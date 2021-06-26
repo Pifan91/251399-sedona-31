@@ -99,7 +99,14 @@
 :root {
   --basic-black: #000000;
   --basic-white: #ffffff;
+  --blue: #669ec0;
+  --blue-dark: #5496bd;
+  --blue-light: #81b3d2;
+  --brown: #604e43;
+  --brown-dark: #503e33;
+  --brown-light: #766357;
   --text-color: #333333;
+  --white-3: rgba(255, 255, 255, 0.3);
 }
 
 html {
@@ -114,7 +121,7 @@ html {
 }
 
 body {
-  display: grid;
+  /*display: grid;*/
   height: 100%;
   margin: 0;
   padding: 0;
@@ -126,8 +133,7 @@ body {
   font-family: "PTSans", "Arial", sans-serif;
   color: var(--text-color);
   text-transform: uppercase;
-
-  grid-template-rows: auto 1fr auto;
+  /*grid-template-rows: auto 1fr auto;*/
 }
 
 img {
@@ -155,7 +161,68 @@ input[type="radio"].visually-hidden {
 }
 
 .container {
-  width: 1200px;
+  width: 1280px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
+}
+
+/*===== BUTTON =====*/
+
+.button {
+  display: inline-block;
+  margin: 0;
+  padding: 3px 17px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  vertical-align: top;
+  text-align: center;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: var(--blue-light);
+  border: none;
+  outline: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--blue);
+}
+
+.button:active {
+  color: var(--white-3);
+
+  background-color: var(--blue-dark);
+}
+
+.button--brown {
+  background-color: var(--brown-light);
+}
+
+.button--brown:hover,
+.button--brown:focus {
+  background-color: var(--brown);
+}
+
+.button--brown:active {
+  color: var(--white-3);
+
+  background-color: var(--brown-dark);
+}
+
+.button--l {
+  padding: 16px 30px;
+
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.button--xl {
+  padding: 30px 60px;
+
+  font-size: 21px;
+  line-height: 26px;
 }
