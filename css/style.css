@@ -107,6 +107,8 @@
   --brown-light: #766357;
   --text-color: #333333;
   --white-3: rgba(255, 255, 255, 0.3);
+  --shadow-color: rgba(0, 1, 1, 0.2);
+  --background-gray: #f2f2f2;
 }
 
 html {
@@ -121,11 +123,10 @@ html {
 }
 
 body {
-  /*display: grid;*/
-  height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+
+  height: 100%;
 
   font-weight: 400;
   font-size: 14px;
@@ -133,7 +134,8 @@ body {
   font-family: "PTSans", "Arial", sans-serif;
   color: var(--text-color);
   text-transform: uppercase;
-  /*grid-template-rows: auto 1fr auto;*/
+
+  background-color: var(--background-gray);
 }
 
 img {
@@ -161,9 +163,14 @@ input[type="radio"].visually-hidden {
 }
 
 .container {
-  width: 1280px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  width: 1200px;
+  height: 100vh;
   margin: 0 auto;
-  padding: 0 40px;
+  background-color: var(--basic-white);
+  box-shadow: 0px 5px 15px var(--shadow-color);
+  overflow-x: hidden;
 }
 
 /*===== BUTTON =====*/
@@ -225,4 +232,88 @@ input[type="radio"].visually-hidden {
 
   font-size: 21px;
   line-height: 26px;
+}
+
+/*===== MAIN-HEADER =====*/
+
+.main-header {
+  min-height: 56px;
+  position: relative;
+}
+
+
+/*===== LOGO =====*/
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 138px;
+  height: 70px;
+}
+
+/*===== NAVIGATION-LIST =====*/
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.navigation-list__item {
+  flex-basis: 240px;
+}
+
+.navigation-list__item--m-r {
+  margin-right: 275px;
+}
+
+.navigation-list__link {
+  display: block;
+  padding: 15px 0;
+  color: var(--basic-black);
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/*===== WELCOME =====*/
+
+.welcome {
+  padding-bottom: 50px;
+}
+
+.welcome__image {
+  width: 1200px;
+  height: 510px;
+  margin-bottom: 33px;
+}
+
+.welcome__title {
+  color: var(--basic-black);
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0 150px;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.welcome__text {
+  text-align: center;
+  margin: 0;
+  padding: 0 150px;
+  margin-bottom: 25px;
+}
+
+.welcome__text:last-of-type {
+  margin-bottom: 0;
 }
