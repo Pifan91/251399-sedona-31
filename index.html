@@ -104,6 +104,49 @@
           </li>
         </ul>
       </section>
+
+      <section class="search">
+        <h2 class="search__title">Заинтересовались?</h2>
+        <p class="search__text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <a class="search__button button button--brown button--xl" href="#">Поиск гостиницы в Седоне</a>
+        <form class="search__form" action="#">
+          <div class="search__form-inner">
+            <label class="search__form-label" for="arrival-date">Дата заезда</label>
+            <input class="search__form-date" type="text" id="arrival-date" placeholder="24 апреля 2017">
+          </div>
+
+          <div class="search__form-inner">
+            <label class="search__form-label" for="departure-date">Дата выезда</label>
+            <input class="search__form-date" type="text" id="departure-date" placeholder="4 июля 2017">
+          </div>
+
+          <div class="search__form-inner">
+            <label class="search__form-label" for="adults">Взрослые</label>
+            <div class="search__form-quantity">
+              <button class="search__form-quantity-button search__form-quantity-button--less" type="button">
+                <span class="visually-hidden">Меньше</span>
+              </button>
+              <input class="search__form-date" type="text" id="adults" placeholder="2">
+              <button class="search__form-quantity-button search__form-quantity-button--more" type="button">
+                <span class="visually-hidden">Больше</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="search__form-inner">
+            <label class="search__form-label" for="children">Дети</label>
+            <div class="search__form-quantity">
+              <button class="search__form-quantity-button search__form-quantity-button--less" type="button">
+                <span class="visually-hidden">Меньше</span>
+              </button>
+              <input class="search__form-date" type="text" id="children" placeholder="0">
+              <button class="search__form-quantity-button search__form-quantity-button--more" type="button">
+                <span class="visually-hidden">Больше</span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
     </main>
 
     <footer class="main-footer"></footer>
