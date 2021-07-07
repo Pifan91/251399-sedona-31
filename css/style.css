@@ -302,9 +302,20 @@ input[type="radio"].visually-hidden {
 }
 
 .welcome__image {
+  position: relative;
   width: 1200px;
   height: 510px;
   margin-bottom: 40px;
+  background-color: var(--gray-ee);
+}
+
+.welcome__image::before {
+  position: absolute;
+  content: "";
+  background-image: url("../img/mask.png");
+  height: 57px;
+  width: 100%;
+  bottom: 0;
 }
 
 .welcome__title {
@@ -467,6 +478,7 @@ input[type="radio"].visually-hidden {
 /*===== SEARCH =====*/
 
 .search {
+  position: relative;
   width: 568px;
   margin: 0 auto;
   padding: 58px 0 0 0;
@@ -497,6 +509,7 @@ input[type="radio"].visually-hidden {
 }
 
 .search__form {
+  position: absolute;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -511,6 +524,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 0 53px;
 }
 
 .search__form-inner--grow {
@@ -656,3 +670,10 @@ input[type="radio"].visually-hidden {
 .search__form-quantity-button:active svg {
   fill: var(--blue-light);
 }
+
+.search__form-button {
+  width: 100%;
+}
+
+
+/*TODO - Проверь главную по стайлгайду!!!!!!!*/
