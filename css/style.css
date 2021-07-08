@@ -110,6 +110,7 @@
   --gray-eb: #ebebeb;
   --gray-ee: #eeeeee;
   --gray-f2: #f2f2f2;
+  --gray-dark: #bdbbbc;
   --search-form-shadow: rgba(0, 1, 1, 0.15);
   --shadow-color: rgba(0, 1, 1, 0.2);
   --text-color: #333333;
@@ -265,6 +266,7 @@ input[type="radio"].visually-hidden {
   height: 70px;
 
   transform: translateX(-50%);
+  z-index: 1;
 }
 
 /*===== NAVIGATION-LIST =====*/
@@ -297,6 +299,19 @@ input[type="radio"].visually-hidden {
   text-align: center;
   color: var(--basic-black);
   text-decoration: none;
+}
+
+.navigation-list__link:hover {
+  color: var(--blue-light);
+}
+
+.navigation-list__link:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.navigation-list__link:not([href]) {
+  color: var(--brown-light);
 }
 
 /*===== WELCOME =====*/
@@ -698,9 +713,7 @@ input[type="radio"].visually-hidden {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.contacts,
-.social,
-.author {
+.social{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -708,13 +721,18 @@ input[type="radio"].visually-hidden {
 
 .contacts-list {
   margin: 0;
-  padding: 0;
+  padding: 22px 0 0 70px;
 
   list-style: none;
 }
 
 .contacts-list__item {
   line-height: 26px;
+  margin: 0 0 10px;
+}
+
+.contacts-list__item:last-child {
+  margin: 0;
 }
 
 .contacts-list__link {
@@ -746,10 +764,77 @@ input[type="radio"].visually-hidden {
 }
 
 .social-list__link {
+  position: relative;
   display: block;
   width: 46px;
   height: 48px;
 
   background-color: var(--blue-light);
+}
+
+.social-list__link::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social-list__link:hover {
+  background-color: var(--blue);
+}
+
+.social-list__link:active {
+  background-color: var(--blue-dark);
+}
+
+.social-list__link:active::before {
+  opacity: 0.3;
+}
+
+.social-list__link--twitter::before {
+  content: "";
+  background-image: url("../img/twitter.svg");
+  width: 17px;
+  height: 16px;
+}
+
+.social-list__link--facebook::before {
+  content: "";
+  background-image: url("../img/fb.svg");
+  width: 12px;
+  height: 22px;
+}
+
+.social-list__link--youtube::before {
+  content: "";
+  background-image: url("../img/youtube.svg");
+  width: 20px;
+  height: 16px;
+}
+
+.author {
+  display: flex;
+  align-items: flex-start;
+  padding: 45px 0 0 65px;
+}
+
+.author b {
+  margin: 0 15px 0 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--basic-black);
+}
+
+.author__link {
+  fill: var(--basic-black);
+}
+
+.author__link:hover {
+  fill: var(--blue-light);
+}
+
+.author__link:active {
+  fill: var(--gray-dark);
 }
 /*TODO - Проверь главную по стайлгайду!!!!!!!*/
