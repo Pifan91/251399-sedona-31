@@ -8,8 +8,8 @@
 
 
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="favicon/180.png">
+  <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/180.png">
   <link rel="manifest" href="manifest.webmanifest">
 
   <link href="css/normalize.min.css" rel="stylesheet">
@@ -42,7 +42,48 @@
     </header>
 
     <main>
+      <section class="filter">
+        <h2 class="visually-hidden">Фильтр апартаментов</h2>
+        <form action="" class="filter-form">
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <ul class="filter-form__list">
+              <li class="filter-form__list-item">
+                <input class="visually-hidden" type="checkbox" name="pool" id="pool" checked>
+                <label class="filter-form__checkbox" for="pool">Бассейн</label>
+              </li>
+              <li class="filter-form__list-item">
+                <input class="visually-hidden" type="checkbox" name="parking" id="parking">
+                <label class="filter-form__checkbox" for="parking">Парковка</label>
+              </li>
+              <li class="filter-form__list-item">
+                <input class="visually-hidden" type="checkbox" name="wi-fi" id="wi-fi">
+                <label class="filter-form__checkbox" for="wi-fi">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
 
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <ul class="filter-form__list">
+              <li class="filter-form__list-item">
+                <input class="visually-hidden" type="checkbox" name="hotel" id="hotel">
+                <label class="filter-form__checkbox" for="hotel">Гостиница</label>
+              </li>
+              <li class="filter-form__list-item">
+                <input class="visually-hidden" type="checkbox" name="motel" id="motel">
+                <label class="filter-form__checkbox" for="motel">Мотель</label>
+              </li>
+              <li class="filter-form__list-item">
+                <input class="visually-hidden" type="checkbox" name="apartments" id="apartments">
+                <label class="filter-form__checkbox" for="apartments">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+
+
+        </form>
+      </section>
     </main>
 
     <footer class="main-footer">
