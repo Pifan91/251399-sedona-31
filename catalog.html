@@ -81,9 +81,93 @@
             </ul>
           </fieldset>
 
+          <fieldset class="filter-form__prices">
+            <legend>Стоимость в сутки, ₽:</legend>
 
+            <ul class="prices">
+              <li class="prices__item">
+                <label class="prices__label" for="min-price">От</label>
+                <input class="prices__input" id="min-price" type="text">
+              </li>
+              <li class="prices__item">
+                <label class="prices__label" for="max-price">До</label>
+                <input class="prices__input" id="max-price" type="text">
+              </li>
+            </ul>
+
+            <div class="price-range">
+              <div class="price-range__scale">
+                <button class="price-range__button price-range__button--min" type="button">
+                  <span class="visually-hidden">Минимальная цена</span>
+                </button>
+                <button class="price-range__button price-range__button--max" type="button">
+                  <span class="visually-hidden">Максимальная цена</span>
+                </button>
+              </div>
+            </div>
+          </fieldset>
         </form>
       </section>
+
+      <div class="catalog">
+        <section class="sorting">
+          <b class="sorting__results">Найдено: 3</b>
+          <h2 class="sorting__title">Сортировка:</h2>
+          <ul class="sorting__list">
+            <li class="sorting__list-item">
+              <a class="sorting__list-link sorting__list-link--active" href="#">По цене</a>
+            </li>
+            <li class="sorting__list-item">
+              <a class="sorting__list-link" href="#">По типу</a>
+            </li>
+            <li class="sorting__list-item sorting__list-item--m-r-auto">
+              <a class="sorting__list-link" href="#">По рейтингу</a>
+            </li>
+            <li class="sorting__list-item">
+              <a class="sorting__list-link sorting__list-link--increase" href="#">
+                <span class="visually-hidden">Сортировка по возрастанию</span>
+              </a>
+            </li>
+            <li class="sorting__list-item">
+              <a class="sorting__list-link sorting__list-link--active sorting__list-link--decrease" href="#">
+                <span class="visually-hidden">Сортировка по убыванию</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <ul class="apartament-list">
+          <li class="apartament-list__item apartament">
+            <a class="apartament__name">Amara Resort & Spa</a>
+            <img class="apartament__image" width="135" height="90" src="#" alt="">
+            <span class="apartament__type">Гостиница</span>
+            <span class="apartament__price">От 4000 ₽</span>
+            <a class="button" href="#">Подробнее</a>
+            <a class="button button--brown" href="#">Забронировать</a>
+            <span class="apartament__rating">Рейтинг: 8,5</span>
+          </li>
+
+          <li class="apartament-list__item apartament">
+            <a class="apartament__name">Amara Resort & Spa</a>
+            <img class="apartament__image" width="135" height="90" src="#" alt="">
+            <span class="apartament__type">Гостиница</span>
+            <span class="apartament__price">От 4000 ₽</span>
+            <a class="button" href="#">Подробнее</a>
+            <a class="button button--brown" href="#">Забронировать</a>
+            <span class="apartament__rating">Рейтинг: 8,5</span>
+          </li>
+
+          <li class="apartament-list__item apartament">
+            <a class="apartament__name">Amara Resort & Spa</a>
+            <img class="apartament__image" width="135" height="90" src="#" alt="">
+            <span class="apartament__type">Гостиница</span>
+            <span class="apartament__price">От 4000 ₽</span>
+            <a class="button" href="#">Подробнее</a>
+            <a class="button button--brown" href="#">Забронировать</a>
+            <span class="apartament__rating">Рейтинг: 8,5</span>
+          </li>
+        </ul>
+      </div>
     </main>
 
     <footer class="main-footer">

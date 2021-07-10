@@ -700,6 +700,8 @@ input[type="radio"].visually-hidden {
   width: 100%;
 }
 
+/*===== MAIN-FOOTER =====*/
+
 .main-footer {
   position: absolute;
   bottom: 0;
@@ -713,11 +715,7 @@ input[type="radio"].visually-hidden {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.social{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+/*===== CONTACTS =====*/
 
 .contacts-list {
   margin: 0;
@@ -745,6 +743,14 @@ input[type="radio"].visually-hidden {
   color: var(--basic-black);
   text-transform: uppercase;
   text-decoration: none;
+}
+
+/*===== SOCIAL =====*/
+
+.social{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-list {
@@ -812,6 +818,8 @@ input[type="radio"].visually-hidden {
   height: 16px;
 }
 
+/*===== AUTHOR =====*/
+
 .author {
   display: flex;
   align-items: flex-start;
@@ -837,4 +845,22 @@ input[type="radio"].visually-hidden {
 .author__link:active {
   fill: var(--gray-dark);
 }
-/*TODO - Проверь главную по стайлгайду!!!!!!!*/
+
+
+/*========== CATALOG.html ==========*/
+
+/*===== FILTER =====*/
+
+.filter-form {
+  display: flex;
+  align-items: flex-start;
+  min-height: 217px;
+  background-color: var(--basic-black);
+}
+
+
+/*===== CATALOG =====*/
+
+.catalog {
+  padding: 0 72px;
+}
