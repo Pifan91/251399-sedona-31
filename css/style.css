@@ -99,15 +99,18 @@
 :root {
   --basic-black: #000000;
   --basic-white: #ffffff;
+  --black-3: rgba(0, 0, 0, 0.3);
   --blue: #669ec0;
   --blue-dark: #5496bd;
   --blue-light: #81b3d2;
   --brown: #604e43;
   --brown-dark: #503e33;
   --brown-light: #766357;
+  --gray-66: #666666;
   --gray-6a: #6a6a6a;
   --gray-a9: #a9a9a9;
   --gray-ab: #ababab;
+  --gray-ca: #cacaca;
   --gray-dark: #bdbbbc;
   --gray-e5: #e5e5e5;
   --gray-eb: #ebebeb;
@@ -1102,8 +1105,150 @@ input[type="radio"].visually-hidden {
   background-color: var(--basic-white);
 }
 
-/*===== CATALOG =====*/
+/*===== SORTING =====*/
 
-.catalog {
-  padding: 0 72px;
+.sorting {
+  display: flex;
+  align-items: flex-start;
+  min-height: 86px;
+  padding: 30px 72px;
 }
+
+.sorting__results {
+  margin: 0 48px 0 0;
+
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.sorting__title {
+  margin: 0 40px 0 0;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.sorting__list {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.sorting__list-item {
+  margin: 0 32px 0 0;
+
+  line-height: 18px;
+}
+
+.sorting__list-item:last-child {
+  margin: 0;
+}
+
+.sorting__list-item--m-r-auto {
+  margin: 0 auto 0 0;
+}
+
+.sorting__list-item--arrow {
+  margin: 0 12px 0 0;
+}
+
+.sorting__list-link {
+  display: block;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--black-3);
+  text-transform: uppercase;
+  text-decoration: none;
+
+  border-bottom: 1px dotted var(--blue-light);
+}
+
+.sorting__list-link--active {
+  color: var(--blue-light);
+
+  border: none;
+}
+
+.sorting__list-link--arrow {
+  padding: 7px 0 0 0;
+
+  border: none;
+
+  fill: var(--gray-ca);
+}
+
+.sorting__list-link--arrow.sorting__list-link--active {
+  fill: var(--blue-light);
+}
+
+/*===== APARTAMENT =====*/
+
+.apartament-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.apartament {
+  padding: 0 72px;
+
+  border-top: 1px solid var(--gray-e5);
+}
+
+.apartament__name {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.apartament__image {
+  width: 135px;
+  height: 90px;
+}
+
+.apartament__type {
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+
+.apartament__price {
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+
+.apartament__rating {
+  min-width: 110px;
+  padding: 5px 10px;
+
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--gray-66);
+  text-transform: uppercase;
+
+  background-color: var(--gray-f2);
+}
+
+
+/*STYLEGUIDE!!!!!!!!!!!!!!!!!!*/
+
