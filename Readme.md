@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Николай Епифанов](https://up.htmlacademy.ru/htmlcss/31/user/251399).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктор Кан](https://htmlacademy.ru/profile/viktorkan).
 
 ---
 
