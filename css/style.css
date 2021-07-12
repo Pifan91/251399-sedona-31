@@ -16,7 +16,7 @@
 
 @keyframes bounce {
   0% {
-    transform: translate(-50%, -55%);
+    transform: translateY(0);
     opacity: 1;
 
     animation-timing-function: ease-in;
@@ -27,25 +27,25 @@
   }
 
   40% {
-    transform: translate(-50%, -54%);
+    transform: translateY(-4%);
 
     animation-timing-function: ease-in;
   }
 
   65% {
-    transform: translate(-50%, -53%);
+    transform: translateY(-3%);
 
     animation-timing-function: ease-in;
   }
 
   82% {
-    transform: translate(-50%, -52%);
+    transform: translateY(-2%);
 
     animation-timing-function: ease-in;
   }
 
   93% {
-    transform: translate(-50%, -51%);
+    transform: translateY(-1%);
 
     animation-timing-function: ease-in;
   }
@@ -54,47 +54,18 @@
   55%,
   75%,
   87% {
-    transform: translate(-50%, -50%);
+    transform: translateY(0);
 
     animation-timing-function: ease-out;
   }
 
   100% {
-    transform: translate(-50%, -50%);
+    transform: translateY(0);
     opacity: 1;
 
     animation-timing-function: ease-out;
   }
 }
-
-@keyframes shake {
-  0%,
-  100% {
-    transform: translate(-50%, -50%);
-  }
-
-  10%,
-  30%,
-  50%,
-  70% {
-    transform: translate(-52%, -50%);
-  }
-
-  20%,
-  40%,
-  60% {
-    transform: translate(-48%, -50%);
-  }
-
-  80% {
-    transform: translate(-49%, -50%);
-  }
-
-  90% {
-    transform: translate(-51%, -50%);
-  }
-}
-
 
 :root {
   --basic-black: #000000;
@@ -277,6 +248,10 @@ input[type="radio"].visually-hidden {
 
 /*===== NAVIGATION-LIST =====*/
 
+.navigation {
+  padding: 0 72px;
+}
+
 .navigation-list {
   display: flex;
   justify-content: space-between;
@@ -288,20 +263,30 @@ input[type="radio"].visually-hidden {
 }
 
 .navigation-list__item {
-  flex-basis: 240px;
+  flex-basis: 228px;
+  padding: 15px 0;
+}
+
+.navigation-list__item--left {
+  text-align: left;
+}
+
+.navigation-list__item--right {
+  text-align: right;
 }
 
 .navigation-list__item--m-r {
-  margin-right: 275px;
+  margin-right: auto;
 }
 
+
 .navigation-list__link {
-  display: block;
-  padding: 15px 0;
+  display: inline-block;
 
   font-weight: 700;
   font-size: 14px;
   line-height: 26px;
+  vertical-align: top;
   text-align: center;
   color: var(--basic-black);
   text-decoration: none;
@@ -451,6 +436,12 @@ input[type="radio"].visually-hidden {
   color: var(--basic-white);
 }
 
+.advantages-list__item-image {
+  height: 100%;
+
+  object-fit: cover;
+}
+
 /*===== FEATURES-LIST =====*/
 
 .features-list {
@@ -541,6 +532,7 @@ input[type="radio"].visually-hidden {
 
 .search__form {
   position: absolute;
+  z-index: 1;
 
   display: flex;
   flex-wrap: wrap;
@@ -550,6 +542,12 @@ input[type="radio"].visually-hidden {
 
   background-color: var(--basic-white);
   box-shadow: 0 7px 15px var(--search-form-shadow);
+
+  animation: bounce 0.9s both;
+}
+
+.search__form--hide {
+  display: none;
 }
 
 .search__form-inner {
@@ -765,6 +763,7 @@ input[type="radio"].visually-hidden {
 
 .social-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 
@@ -958,6 +957,10 @@ input[type="radio"].visually-hidden {
 
 .filter-form__checkbox:disabled:checked + .filter-form__checkbox-label::before {
   background-image: url("../img/checkbox-on-disabled.svg");
+}
+
+.filter-form__checkbox:focus + .filter-form__checkbox-label::before {
+  outline: 1px solid var(--basic-white);
 }
 
 /*===== PRICES =====*/
@@ -1235,6 +1238,14 @@ input[type="radio"].visually-hidden {
   grid-column: 2 / 4;
 }
 
+.apartament__name:hover {
+  color: var(--blue-light);
+}
+
+.apartament__name:active {
+  color: var(--black-3);
+}
+
 .apartament__image {
   display: block;
   width: 135px;
@@ -1283,6 +1294,7 @@ input[type="radio"].visually-hidden {
 
   grid-column: -1 / -2;
   grid-row: -1 / -2;
+  justify-self: start;
 }
 
 .apartament__more {
@@ -1291,6 +1303,7 @@ input[type="radio"].visually-hidden {
 
   grid-column: 2 / 3;
   grid-row: -1 / -2;
+  justify-self: start;
 }
 
 .apartament__booking {
@@ -1299,6 +1312,7 @@ input[type="radio"].visually-hidden {
 
   grid-column: 3 / 4;
   grid-row: -1 / -2;
+  justify-self: start;
 }
 
 .rating-list {
@@ -1322,4 +1336,18 @@ input[type="radio"].visually-hidden {
   margin: 0;
 }
 
-/*STYLEGUIDE!!!!!!!!!!!!!!!!!!*/
+.map {
+  position: relative;
+
+  width: 100%;
+  height: 593px;
+}
+
+.map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
