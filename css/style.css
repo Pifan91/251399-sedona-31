@@ -366,8 +366,6 @@ input[type="radio"].visually-hidden {
 
   list-style: none;
 
-  counter-reset: advantages;
-
   grid-auto-rows: minmax(256px, auto);
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, auto);
@@ -385,8 +383,18 @@ input[type="radio"].visually-hidden {
   background-color: var(--blue-light);
 }
 
-.advantages-list__item--image {
-  grid-column: span 2;
+.advantages-list__item--big {
+  display: grid;
+
+  grid-column: span 3;
+  grid-template-columns: 400px 1fr;
+}
+
+.advantages-list__item--big-reverse {
+  display: grid;
+
+  grid-column: span 3;
+  grid-template-columns: 1fr 400px;
 }
 
 .advantages-list__item--subtitle {
@@ -436,6 +444,14 @@ input[type="radio"].visually-hidden {
   height: 100%;
 
   object-fit: cover;
+}
+
+.advantages-list__item--big-reverse .advantages-list__item-image {
+  order: 1;
+}
+
+.advantages-list__item--big-reverse .advantages-list__item-wrapper {
+  order: 2;
 }
 
 /*===== FEATURES-LIST =====*/
@@ -577,7 +593,7 @@ input[type="radio"].visually-hidden {
   grid-column: 1/ -1;
 }
 
-.search__form-label--date svg {
+.search__form-date-icon {
   position: absolute;
   top: 50%;
   right: 10px;
@@ -587,11 +603,11 @@ input[type="radio"].visually-hidden {
   fill: var(--gray-a9);
 }
 
-.search__form-label--date svg:hover {
+.search__form-date-icon:hover {
   fill: var(--basic-black);
 }
 
-.search__form-label--date svg:active {
+.search__form-date-icon:active {
   fill: var(--blue-light);
 }
 
