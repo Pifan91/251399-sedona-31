@@ -254,6 +254,7 @@ input[type="radio"].visually-hidden {
 
 .navigation-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   margin: 0;
@@ -1244,7 +1245,7 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
   text-decoration: none;
 
-  grid-column: 2 / 4;
+  grid-column: 2 / 5;
 }
 
 .apartament__name:hover {
