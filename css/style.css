@@ -1166,7 +1166,19 @@ input[type="radio"].visually-hidden {
   border-bottom: 1px dotted var(--blue-light);
 }
 
-.sorting__list-link--active {
+.sorting__list-link:hover {
+  color: var(--blue-light);
+}
+
+.sorting__list-link:active {
+  color: var(--basic-black);
+
+  border: none;
+}
+
+.sorting__list-link--active,
+.sorting__list-link--active:hover,
+.sorting__list-link--active:active {
   color: var(--blue-light);
 
   border: none;
@@ -1180,7 +1192,17 @@ input[type="radio"].visually-hidden {
   fill: var(--gray-ca);
 }
 
-.sorting__list-link--arrow.sorting__list-link--active {
+.sorting__list-link--arrow:hover {
+  fill: var(--basic-black);
+}
+
+.sorting__list-link--arrow:active {
+  fill: var(--blue-light);
+}
+
+.sorting__list-link--arrow.sorting__list-link--active,
+.sorting__list-link--arrow.sorting__list-link--active:hover,
+.sorting__list-link--arrow.sorting__list-link--active:active {
   fill: var(--blue-light);
 }
 
