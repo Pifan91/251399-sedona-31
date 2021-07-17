@@ -255,12 +255,12 @@ input[type="radio"].visually-hidden {
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: flex-start;
   margin: 0;
   padding: 0;
 
   list-style: none;
+  text-align: left;
 }
 
 .navigation-list__item {
@@ -268,15 +268,13 @@ input[type="radio"].visually-hidden {
   padding: 15px 0;
 }
 
-.navigation-list__item--left {
-  text-align: left;
-}
-
-.navigation-list__item--right {
+.navigation-list__item:nth-child(4n + 3),
+.navigation-list__item:nth-child(4n + 4) {
   text-align: right;
 }
 
-.navigation-list__item--m-r {
+.navigation-list__item:nth-child(2),
+.navigation-list__item:nth-child(4n + 2) {
   margin-right: auto;
 }
 
